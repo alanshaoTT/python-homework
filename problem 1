@@ -1,0 +1,20 @@
+import random
+
+b = True
+cor = random.randint(1,100)
+def guess(n):
+    if n == cor:
+        print(f'猜测正确，共猜了{x}次')
+        b = False
+    elif n >= cor:
+        print('偏大')
+    else:
+        print('偏小')
+
+for i in range(100):
+    if(b):
+        x = i
+        n = int(input('请猜数字：'))
+        guess(n)
+    else:
+        break
