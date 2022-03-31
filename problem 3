@@ -1,0 +1,20 @@
+def sort(nums,left,right):
+    if left>=right:
+        return 0
+    baseNumber=nums[left]
+    i=left
+    j=right
+    while i!=j:
+        while j>i and nums[j]>=baseNumber:
+            j-=1
+        if j>i:
+            nums[i],nums[j]=nums[j],nums[i]
+        while i<j and nums[i]<=baseNumber:
+            i+=1
+        if i<j:
+            nums[i],nums[j]=nums[j],nums[i]
+    sort(nums,left,i-1)
+    sort(nums,i+1,right)
+data = [4,6,2,1,7,12,25,13,9]
+sort(data,0,len(data)-1)
+print(data)
