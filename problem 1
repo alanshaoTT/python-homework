@@ -1,0 +1,10 @@
+def sort(data):
+    for i in range(len(data)-1):
+        for j in range(1,len(data)-i):
+            if data[j-1] > data[j]:
+                t = data[j-1]
+                data[j-1] = data[j]
+                data[j] = t
+data = [4,6,2,1,7,12,25,13,9]
+sort(data)
+print(data)
