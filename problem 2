@@ -1,0 +1,11 @@
+def sort(data):
+    for j in range(0, len(data) - 1):
+        min_index = j
+        for i in range(j + 1, len(data)):
+            if data[min_index] > data[i]:
+                min_index = i
+        if j != min_index:
+            data[min_index], data[j] = data[j], data[min_index]
+data = [4,6,2,1,7,12,25,13,9]
+sort(data)
+print(data)
