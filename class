@@ -1,0 +1,16 @@
+class student():
+    def __init__(self,name ,age,score):
+        self.name = name
+        self.age = age
+        self.score = score
+    def get_name(self)->str:
+        return self.name
+    def get_age(self)->int:
+        return self.age
+    def get_score(self)->int:
+        return max(self.score)
+
+zm = student('alan',20,[68,88,100])
+print('name is',zm.get_name())
+print('age is',zm.get_age())
+print('max score is',zm.get_score())
